@@ -96,7 +96,7 @@ function Index() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { Icon: Scissors, img: lawnImg, t: "Lawn Care", d: "Mowing, edging, fertilization, and seasonal cleanups." },
+            { Icon: Scissors, img: lawnImg, t: "Lawn Care & Edging", d: "Crisp edging, weed control, and seasonal cleanups (we don't mow)." },
             { Icon: TreePine, img: hedgesImg, t: "Hedge & Tree", d: "Precision trimming, pruning, and shrub shaping." },
             { Icon: Sprout, img: designImg, t: "Garden Design", d: "Beds, mulch, hardscapes, and seasonal plantings." },
           ].map(({ Icon, img, t, d }) => (
