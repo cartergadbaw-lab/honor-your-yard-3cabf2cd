@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -26,14 +25,18 @@ function ContactPage() {
     setSubmitting(true);
     const fd = new FormData(e.currentTarget);
     try {
-      const { error } = await supabase.from('quote_requests').insert({
-        name: String(fd.get('name') || '').trim(),
-        email: String(fd.get('email') || '').trim(),
-        phone: String(fd.get('phone') || '').trim() || null,
-        address: String(fd.get('address') || '').trim() || null,
-        message: String(fd.get('message') || '').trim() || null,
+      const res = await fetch('/api/public/quote-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: String(fd.get('name') || '').trim(),
+          email: String(fd.get('email') || '').trim(),
+          phone: String(fd.get('phone') || '').trim() || null,
+          address: String(fd.get('address') || '').trim() || null,
+          message: String(fd.get('message') || '').trim() || null,
+        }),
       });
-      if (error) throw error;
+      if (!res.ok) throw new Error('Request failed');
       setSent(true);
     } catch {
       setError("Something went wrong. Please call us or try again.");
