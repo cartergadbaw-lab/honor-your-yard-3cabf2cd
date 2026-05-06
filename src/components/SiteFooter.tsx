@@ -1,0 +1,44 @@
+import { Link } from "@tanstack/react-router";
+import { Leaf, Phone, Mail, MapPin } from "lucide-react";
+
+export function SiteFooter() {
+  return (
+    <footer className="mt-24 border-t border-border/60 bg-[var(--forest)] text-[var(--cream)]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-3">
+        <div>
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)] text-primary">
+              <Leaf className="h-5 w-5" />
+            </span>
+            <div>
+              <div className="font-serif text-lg">Gentleman's Outdoor</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] opacity-70">Your Yard, Our Honor</div>
+            </div>
+          </div>
+          <p className="mt-4 max-w-xs text-sm opacity-75">
+            Refined landscaping and lawn care delivered with old-fashioned craftsmanship.
+          </p>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-widest text-[var(--gold)]">Explore</h4>
+          <ul className="mt-4 space-y-2 text-sm opacity-85">
+            <li><Link to="/services" className="hover:text-[var(--gold)]">Services</Link></li>
+            <li><Link to="/about" className="hover:text-[var(--gold)]">About</Link></li>
+            <li><Link to="/contact" className="hover:text-[var(--gold)]">Contact</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-sm font-semibold uppercase tracking-widest text-[var(--gold)]">Get in touch</h4>
+          <ul className="mt-4 space-y-2 text-sm opacity-85">
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> (555) 123-4567</li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> hello@gentlemansoutdoor.com</li>
+            <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Serving the Tri-State Area</li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-white/10 py-5 text-center text-xs opacity-60">
+        © {new Date().getFullYear()} Gentleman's Outdoor Services. All rights reserved.
+      </div>
+    </footer>
+  );
+}
