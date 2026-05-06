@@ -69,7 +69,7 @@ function ContactPage() {
             { Icon: Phone, t: "Call", d: "(555) 123-4567" },
             { Icon: Mail, t: "Email", d: "hello@gentlemansoutdoor.com" },
             { Icon: MapPin, t: "Service Area", d: "Livingston County" },
-            { Icon: Clock, t: "Hours", d: "Mon–Sat · 7am – 6pm" },
+            { Icon: Clock, t: "Hours", d: "Mon–Sun · 7am – 7pm" },
           ].map(({ Icon, t, d }) => (
             <div key={t} className="flex items-start gap-4 rounded-2xl border border-border/60 bg-card p-5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--gold)] text-primary">
