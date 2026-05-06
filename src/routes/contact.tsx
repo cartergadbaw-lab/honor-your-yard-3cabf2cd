@@ -16,6 +16,35 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    const fd = new FormData(e.currentTarget);
+    try {
+      const res = await fetch('/api/public/quote-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fd.get('name'),
+          email: fd.get('email'),
+          phone: fd.get('phone'),
+          address: fd.get('address'),
+          message: fd.get('message'),
+        }),
+      });
+      if (!res.ok) throw new Error('Failed');
+      setSent(true);
+    } catch {
+      setError("Something went wrong. Please call us or try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <>
       <section className="bg-[var(--cream)] border-b border-border/60">
@@ -32,7 +61,7 @@ function ContactPage() {
 
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.2fr_1fr]">
         <form
-          onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+          onSubmit={handleSubmit}
           className="rounded-2xl border border-border/60 bg-card p-8 shadow-[var(--shadow-soft)]"
         >
           {sent ? (
