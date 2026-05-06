@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { createClient } from '@supabase/supabase-js'
-import { renderAsync } from '@react-email/components'
+import { render } from '@react-email/components'
 import * as React from 'react'
 import { z } from 'zod'
 import { TEMPLATES } from '@/lib/email-templates/registry'
@@ -60,7 +60,7 @@ export const Route = createFileRoute('/api/public/quote-request')({
         // Pre-render and enqueue the notification email
         try {
           const entry = TEMPLATES['quote-request-notification']
-          const html = await renderAsync(React.createElement(entry.component, data))
+          const html = await render(React.createElement(entry.component, data))
           const subject =
             typeof entry.subject === 'function' ? entry.subject(data) : entry.subject
 
