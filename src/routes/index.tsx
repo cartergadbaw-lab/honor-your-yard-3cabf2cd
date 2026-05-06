@@ -130,8 +130,7 @@ function Index() {
       <section className="bg-[var(--forest)] text-[var(--cream)]">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
           <p className="font-serif text-3xl italic leading-snug md:text-4xl">
-            “They don't just cut grass — they care for the place like it's their own.
-            That's the gentleman's way.”
+            “Whatever you do, work at it with all your heart.”
           </p>
           <div className="mt-6 text-sm uppercase tracking-[0.2em] text-[var(--gold)]">
             — Colossians 3:23
