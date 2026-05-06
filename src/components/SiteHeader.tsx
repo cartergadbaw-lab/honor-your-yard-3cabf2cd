@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -14,13 +15,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-soft)]">
-            <Leaf className="h-5 w-5" />
-          </span>
-          <span className="flex flex-col leading-tight">
+        <Link to="/" className="flex items-center gap-3 group">
+          <img src={logo} alt="Gentleman's Outdoor Services" width={48} height={48} className="h-12 w-12 object-contain" />
+          <span className="hidden sm:flex flex-col leading-tight">
             <span className="font-serif text-lg font-semibold text-foreground">Gentleman's Outdoor</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Services</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Your Yard, Our Honor</span>
           </span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
