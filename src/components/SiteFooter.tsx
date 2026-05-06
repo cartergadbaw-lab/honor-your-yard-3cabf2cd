@@ -1,14 +1,15 @@
 import { Link } from "@tanstack/react-router";
-import { Leaf, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-border/60 bg-[var(--forest)] text-[var(--cream)]">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)] text-primary">
-              <Leaf className="h-5 w-5" />
+          <div className="flex items-center gap-3">
+            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--cream)] p-1.5">
+              <img src={logo} alt="Gentleman's Outdoor Services" width={48} height={48} className="h-full w-full object-contain" />
             </span>
             <div>
               <div className="font-serif text-lg">Gentleman's Outdoor</div>
