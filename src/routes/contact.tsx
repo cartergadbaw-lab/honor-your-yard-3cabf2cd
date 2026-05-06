@@ -86,8 +86,9 @@ function ContactPage() {
                   placeholder="Tell us what you're looking for..."
                 />
               </div>
-              <button type="submit" className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5">
-                Send Request <Send className="h-4 w-4" />
+              {error && <p className="text-sm text-destructive">{error}</p>}
+              <button type="submit" disabled={submitting} className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 disabled:opacity-60">
+                {submitting ? 'Sending...' : 'Send Request'} <Send className="h-4 w-4" />
               </button>
             </div>
           )}
