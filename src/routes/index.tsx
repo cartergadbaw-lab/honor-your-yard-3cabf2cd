@@ -134,7 +134,7 @@ function Index() {
             That's the gentleman's way.”
           </p>
           <div className="mt-6 text-sm uppercase tracking-[0.2em] text-[var(--gold)]">
-            — Margaret H., Westfield
+            — Colossians 3:23
           </div>
         </div>
       </section>
