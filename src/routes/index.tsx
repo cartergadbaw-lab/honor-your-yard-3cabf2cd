@@ -63,7 +63,7 @@ function Index() {
       <section className="border-b border-border/60 bg-[var(--cream)]">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 py-10 md:grid-cols-3">
           {[
-            { Icon: Award, t: "Family Owned", d: "Built on reputation, not shortcuts." },
+            { Icon: Award, t: "Locally Owned", d: "Proudly serving our community with dependable outdoor services." },
             { Icon: ShieldCheck, t: "Licensed & Insured", d: "Full coverage on every property." },
             { Icon: Clock, t: "On-Time, Every Time", d: "Punctual service, week after week." },
           ].map(({ Icon, t, d }) => (
