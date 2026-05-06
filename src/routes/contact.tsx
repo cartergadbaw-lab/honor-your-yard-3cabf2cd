@@ -66,7 +66,7 @@ function ContactPage() {
 
         <aside className="space-y-6">
           {[
-            { Icon: Phone, t: "Call", d: "(555) 123-4567" },
+            { Icon: Phone, t: "Call", d: "(734) 679-9573" },
             { Icon: Mail, t: "Email", d: "hello@gentlemansoutdoor.com" },
             { Icon: MapPin, t: "Service Area", d: "Livingston County" },
             { Icon: Clock, t: "Hours", d: "Mon–Sun · 7am – 7pm" },

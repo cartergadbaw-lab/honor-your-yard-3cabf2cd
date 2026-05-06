@@ -31,7 +31,7 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-widest text-[var(--gold)]">Get in touch</h4>
           <ul className="mt-4 space-y-2 text-sm opacity-85">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> (555) 123-4567</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> (734) 679-9573</li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> hello@gentlemansoutdoor.com</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Serving Livingston County</li>
           </ul>
