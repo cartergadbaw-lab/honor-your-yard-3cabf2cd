@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    cloudflare: false,
     vite: {
       plugins: [nitro()],
       resolve: {
