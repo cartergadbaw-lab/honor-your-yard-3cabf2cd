@@ -63,7 +63,7 @@ function Index() {
       <section className="border-b border-border/60 bg-[var(--cream)]">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 py-10 md:grid-cols-3">
           {[
-            { Icon: Award, t: "— Colossians 3:23", d: "Built on reputation, not shortcuts." },
+            { Icon: Award, t: "Family Owned", d: "Built on reputation, not shortcuts." },
             { Icon: ShieldCheck, t: "Licensed & Insured", d: "Full coverage on every property." },
             { Icon: Clock, t: "On-Time, Every Time", d: "Punctual service, week after week." },
           ].map(({ Icon, t, d }) => (
@@ -129,7 +129,7 @@ function Index() {
       {/* Quote band */}
       <section className="bg-[var(--forest)] text-[var(--cream)]">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
-          <p className="font-serif text-3xl italic leading-snug font-thin md:text-5xl">
+          <p className="font-serif text-3xl italic leading-snug md:text-4xl">
             “They don't just cut grass — they care for the place like it's their own.
             That's the gentleman's way.”
           </p>
