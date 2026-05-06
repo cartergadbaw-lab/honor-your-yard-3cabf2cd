@@ -65,7 +65,7 @@ function Index() {
           {[
             { Icon: Award, t: "Locally Owned", d: "Proudly serving our community with dependable outdoor services." },
             { Icon: ShieldCheck, t: "Built on Reputation", d: "Quality work, honest service, and attention to detail every time." },
-            { Icon: Clock, t: "On-Time, Every Time", d: "Punctual service, week after week." },
+            { Icon: Clock, t: "On-Time, Every Time", d: "Reliable scheduling and consistent communication you can count on." },
           ].map(({ Icon, t, d }) => (
             <div key={t} className="flex items-start gap-4">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
