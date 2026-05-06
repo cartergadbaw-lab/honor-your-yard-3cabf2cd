@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Scissors, Sprout, TreePine, Leaf, Flower2, Snowflake, ArrowRight } from "lucide-react";
+import { Scissors, Sprout, TreePine, Leaf, Flower2, ArrowRight } from "lucide-react";
 import lawnImg from "@/assets/service-lawn.jpg";
 import hedgesImg from "@/assets/service-hedges.jpg";
 import designImg from "@/assets/service-design.jpg";
@@ -22,7 +22,7 @@ const services = [
   { Icon: Sprout, img: designImg, t: "Garden Design & Beds", d: "Thoughtful bed shaping, perennial layouts, and hardscape touches that elevate the entire property." },
   { Icon: Leaf, img: hedgesImg, t: "Seasonal Cleanups", d: "Spring wake-ups and fall leaf removal — bed by bed, corner by corner, until everything is just right." },
   { Icon: Flower2, img: designImg, t: "Mulching & Planting", d: "Premium hardwood mulch, fresh annuals, and seasonal color refreshes that make a property pop." },
-  { Icon: Snowflake, img: lawnImg, t: "Snow & Ice Care", d: "Reliable winter clearing for walkways, drives, and entry steps so your property stays welcoming." },
+  
 ];
 
 function ServicesPage() {
